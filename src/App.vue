@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <p class="title">Mars rover photos</p>
+    <RoverListImages />
+    <NavigationBar />
+    <PhotoGallery />
+    <Footer />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PhotoGallery from "./components/PhotoGallery";
+import RoverListImages from "./components/RoverListImages";
+import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    PhotoGallery,
+    RoverListImages,
+    NavigationBar,
+    Footer,
+  },
+};
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.v-application .title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.3em !important;
+  margin-top: 25px;
+  font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 </style>
