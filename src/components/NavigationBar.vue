@@ -88,7 +88,7 @@ export default {
     ],
     currentCameras: [],
     selectedCamera: null,
-    selectedSol: 1000,
+    selectedSol: 1,
     apiKeyFromNasaAPI: "SMP0jbzbRkh1ocBuGS0rJxMdN2hcVmgbFG1zRgOY",
     noPhotosImage: [
       "https://click2kemah.com/directory/wp-content/uploads/2019/04/No-image-available.jpg",
@@ -105,7 +105,7 @@ export default {
       this.$store.dispatch("findPhotos");
     },
     setParams() {
-      if (this.selectedCamera == "" || this.selectedCamera == "All cameras") {
+      if (this.selectedCamera === "" || this.selectedCamera === "All cameras") {
         this.selectedCamera = "All cameras";
         return {
           sol: this.selectedSol,
