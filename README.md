@@ -1,4 +1,4 @@
-# mars
+# Mars rover photos
 
 ## Project setup
 ```
