@@ -20,7 +20,6 @@ export default new Vuex.Store({
       state.photos = value;
     },
     addMorePhotos(state, value) {
-      // Array.prototype.push.apply(state.photos, morePhotos);
       state.photos = [...state.photos, ...value];
     },
     setParams(state, { params, rover }) {
